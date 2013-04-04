@@ -51,9 +51,9 @@ class MarkdownBuild(sublime_plugin.WindowCommand):
             self.window.open_file(output.name)
         elif open_html_in == "sublime":
             self.window.open_file(output.name)
-        else:
+        elif open_html_in != "none":
             webbrowser.open("file://" + output.name)
-                
+
         #sublime.set_timeout(partial(ctypes.windll.user32.SwitchToThisWindow,sublime.active_window().hwnd(), 0), 250)
         #sublime.set_timeout(partial(ctypes.windll.user32.ShowWindow,sublime.active_window().hwnd(), 5), 500)
         #sublime.set_timeout(partial(ctypes.windll.user32.SetActiveWindow,sublime.active_window().hwnd()), 500)
